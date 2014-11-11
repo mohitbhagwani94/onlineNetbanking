@@ -1,0 +1,59 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+         <result-types>
+       <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" >
+       </result-type>
+         </result-types>
+        <action name="log" class="hpes.Login">
+            <result name="success" type="tiles">/admin</result>
+            <result name="fail">index.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+       
+        <action name="newaccount" >
+            <result name="success" type="tiles">/newaccount</result>
+        </action>
+        <action name="balance" >
+            <result name="success" type="tiles">/balance</result>
+        </action>
+        <action name="deposit" >
+            <result name="success" type="tiles">/deposit</result>
+        </action>
+        <action name="withdraw" >
+            <result name="success" type="tiles">/withdraw</result>
+        </action>
+        <action name="transfer" >
+            <result name="success" type="tiles">/transfer</result>
+        </action>
+        <action name="logout" >
+            <result name="success" type="tiles">/logout</result>
+        </action>
+        <action name="aboutus" >
+            <result name="success" type="tiles">/aboutus</result>
+        </action>
+        
+        
+        <action name="newOpen" class="hpes.NewAccount">
+            <result name="success">success.jsp</result>
+            <result name="fail">newAccount.jsp</result>
+            <result name="input">newAccount.jsp</result>
+        </action>
+        <action name="transferAmount" class="hpes.Transfer">
+            <result name="success">transfer.jsp</result>
+            <result name="fail">fail.jsp</result>
+        </action>
+        <action name="depositAmount" class="hpes.Deposit">
+            <result name="success">success.jsp</result>
+            <result name="fail">fail.jsp </result>
+        </action>
+        <action name="withdrawAmount" class="hpes.Withdraw" >
+            <result name="success">success.jsp</result>        
+        </action>
+       
+    </package>
+</struts>

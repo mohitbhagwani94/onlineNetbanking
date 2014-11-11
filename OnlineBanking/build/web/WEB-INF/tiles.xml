@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+    <definition name="/admin" template="/layout.jsp">
+        <put-attribute name="header" value="/header.jsp" />
+        <put-attribute name="navigation" value="/navigation.jsp"/>
+        <put-attribute name="lmenu" value="/lmenu.jsp" />
+        <put-attribute name="rmenu" value="/rmenu.jsp" />
+        <put-attribute name="body" value="/body.jsp" />
+        <put-attribute name="footer" value="/footer.jsp" />
+    </definition>
+     
+    <definition name="/newaccount" extends="/admin">
+        <put-attribute name="body" value="/newAccount.jsp"></put-attribute>
+     </definition>
+      <definition name="/balance" extends="/admin">
+        <put-attribute name="body" value="/balance.jsp"></put-attribute>
+     </definition>
+     <definition name="/deposit" extends="/admin">
+        <put-attribute name="body" value="/deposit.jsp"></put-attribute>
+     </definition>
+     <definition name="/withdraw" extends="/admin">
+        <put-attribute name="body" value="/withdraw.jsp"></put-attribute>
+     </definition>
+     <definition name="/transfer" extends="/admin">
+        <put-attribute name="body" value="/transfer.jsp"></put-attribute>
+     </definition>
+     <definition name="/logout" extends="/admin">
+        <put-attribute name="body" value="/logout.jsp"></put-attribute>
+     </definition>
+     <definition name="/aboutus" extends="/admin">
+        <put-attribute name="body" value="/aboutus.jsp"></put-attribute>
+     </definition>
+    <!--
+     <definition name="/addnew" extends="/admin">
+        <put-attribute name="body" value="/Home.jsp" />
+    </definition> <definition name="/about" extends="/admin">
+        <put-attribute name="body" value="/About.jsp" />
+    </definition>
+     <definition name="/contact" extends="/admin">
+        <put-attribute name="body" value="/Contact.jsp" />
+    </definition>
+    -->
+</tiles-definitions>
